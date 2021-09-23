@@ -13,6 +13,8 @@ This documentation guides you in setting up a cluster with one master node and o
 Perform all the commands as root user unless otherwise specified
 ##### Disable Firewall
 ```
+sudo su -
+yum install -y firewalld
 systemctl disable firewalld; systemctl stop firewalld
 ```
 ##### Disable swap
