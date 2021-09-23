@@ -38,7 +38,6 @@ sysctl --system
 ```
 
 yum install docker -y 
-system enable --now docker
 service start docker
 #########################
 yum install -y yum-utils device-mapper-persistent-data lvm2
@@ -71,7 +70,7 @@ systemctl enable --now kubelet
 ## On kmaster
 ##### Initialize Kubernetes Cluster
 ```
-kubeadm init --apiserver-advertise-address=172.16.16.100 --pod-network-cidr=192.168.0.0/16
+kubeadm init --pod-network-cidr=192.168.0.0/16
 ```
 ##### Deploy Calico network
 ```
